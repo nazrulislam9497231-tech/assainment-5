@@ -1,0 +1,186 @@
+body{
+font-family:Arial;
+margin:0;
+background:linear-gradient(135deg,#5f9cff,#8fd3f4);;
+}
+
+.hidden{
+display:none;
+}
+
+
+.login{
+width:320px;
+margin:120px auto;
+background:white;
+padding:30px;
+text-align:center;
+border-radius:8px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.login input{
+width:90%;
+padding:10px;
+margin:8px 0;
+border: 1px solid #ccc;
+}
+
+.login button{
+padding:10px 20px;
+cursor:pointer;
+}
+
+.demo{
+font-size:12px;
+color:gray;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#222;
+color:white;
+}
+
+.search input{
+padding:8px;
+}
+
+.search button{
+padding:8px 12px;
+cursor:pointer;
+}
+
+
+.tabs{
+text-align:left;
+margin:20px;
+}
+
+.tab{
+padding:10px 20px;
+margin:5px;
+cursor:pointer;
+border:none;
+background:#ddd;
+}
+
+.tab.active{
+background:black;
+color:white;
+}
+
+
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:20px;
+}
+
+
+
+.card{
+background:white;
+padding:15px;
+border-radius:6px;
+cursor:pointer;
+border-top:5px solid gray;
+}
+
+.card.open{
+border-top:5px solid green;
+}
+
+.card.closed{
+border-top:5px solid purple;
+}
+
+
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.modalContent{
+background:white;
+padding:25px;
+width:200px;
+border-radius:8px;
+}
+
+.close{
+float:right;
+font-size:20px;
+cursor:pointer;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 15px;
+}
+
+
+.spinner{
+width:40px;
+height:40px;
+border:5px solid #ddd;
+border-top:5px solid black;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin:40px auto;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:500px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.hidden { display: none; } 
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+}

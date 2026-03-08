@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Issues Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loginPage" class="login">
+
+<h1>Issues Tracker</h1>
+<p>Track and manage GitHub issues</p>
+
+<input id="username" type="text" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Sign In</button>
+
+<p class="demo">Demo: admin / admin123</p>
+
+</div>
+
+<div id="mainPage" class="hidden">
+
+<nav class="navbar">
+
+<h2>Issues Tracker</h2>
+
+<div class="search">
+
+<input id="searchInput" placeholder="Search issues">
+<button onclick="searchIssue()">Search</button>
+</div>
+</nav>
+ 
+
+<div class="tabs">
+
+<button class="tab active" onclick="changeTab('all',this)">All</button>
+<button class="tab" onclick="changeTab('open',this)">Open</button>
+<button class="tab" onclick="changeTab('closed',this)">Closed</button>
+
+</div>
+
+
+<div id="loading" class="spinner hidden"></div>
+
+<div class="issue-header-container">
+    <div class="header-left">
+        <h2 id="total-issues">50 Issues</h2>
+        <p>Track and manage your project issues</p>
+    </div>
+
+    <div class="header-right">
+        <span class="status-indicator">
+            <span class="open"></span> Open
+        </span>
+        <span class="status-indicator">
+            <span class="closed"></span> Closed
+        </span>
+    </div>
+</div>
+
+<div id="issuesContainer" class="grid"></div>
+
+</div>
+
+</div>
+
+<div id="modal" class="modal-overlay hidden">
+    <div class="modal-content">
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <button id="close-modal" onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
