@@ -28,7 +28,6 @@ let res=await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
 let data=await res.json()
 
 let issues=data.data
-
 if(type==="open"){
 issues=issues.filter(issue=>issue.status==="open")
 }
